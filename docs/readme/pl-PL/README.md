@@ -169,7 +169,7 @@ APITable zapewnia szereg unikatowych funkcjonalności przydatnych do użytkownik
   - One-click auto-generated form
   - Shareable and embeddable page.
   - Multi-language support.
-  - Integration with n8n.io / Zapier / Appsmith... and more.
+  - Integracja z n8n.io / Zapier / Appsmith... i nie tylko.
 - Excellent extensibility
   - Extensible `Widget System` with over 20 officials open-source widgets.
   - Customizable Graph & Chart & Dashboard
@@ -187,8 +187,8 @@ APITable zapewnia szereg unikatowych funkcjonalności przydatnych do użytkownik
   - Single-Sign-On (SSO)
   - Audit
   - Database Auto Backup
-  - Data Exporter
-  - Watermark
+  - Eksporter danych
+  - Znak wodny
 - ....
 
 With extensible widgets and plugins, you can add more features.
@@ -235,7 +235,7 @@ Share your datasheet table or folder. Embed them by copying and pasting HTML scr
 
 [APITable.com](https://apitable.com) provides more Enterprise-ready Embedding features for securities.
 
-## Installation
+## Instalacja
 
 Make sure you have `docker` & `curl` installed locally.
 
@@ -288,7 +288,7 @@ APITable use these common conventions:
 
 ### Documentations
 
-- [Help Center](https://help.apitable.com/)
+- [Centrum pomocy](https://help.apitable.com/)
 - [👩‍💻 Developer Center](https://developers.apitable.com/)
   - [🪡 REST API Docs](https://developers.apitable.com/api/introduction/)
   - Widget SDK (Coming soon...)
