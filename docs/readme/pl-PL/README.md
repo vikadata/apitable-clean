@@ -45,32 +45,32 @@
 </p>
 
 <p align="center">
-  English
+  Polski
   | 
-  <a href="docs/readme/fr-FR/README.md">Français</a>
+  <a href="docs/readme/fr-FR/README.md">Francuski</a>
   | 
-  <a href="docs/readme/es-ES/README.md">Español</a>
+  <a href="docs/readme/es-ES/README.md">Hiszpański</a>
   | 
-  <a href="docs/readme/de-DE/README.md">Deutsch</a>
+  <a href="docs/readme/de-DE/README.md">Niemiecki</a>
   | 
-  <a href="docs/readme/zh-CN/README.md">简体中文</a>
+  <a href="docs/readme/zh-CN/README.md">Chiński uproszczony</a>
   | 
-  <a href="docs/readme/zh-HK/README.md">繁體中文</a>
+  <a href="docs/readme/zh-HK/README.md">Chiński tradycyjny</a>
   | 
-  <a href="docs/readme/ja-JP/README.md">日本語</a>
+  <a href="docs/readme/ja-JP/README.md">Japońśki</a>
 </p>
 
-## ✨ Quick Start
+## ✨ Szybki start
 
-> APITable is currently a `Work In Progress`.
+> APITable jest obecnie `w fazie projektu`.
 > 
-> We will publish the first release in late February 2023.
+> Opublikujemy pierwsze wydanie pod koniec lutego 2023 r.
 > 
-> Join [Discord](https://discord.gg/TwNb9nfdBU) or [Twitter](https://twitter.com/apitable_com) to keep in touch.<!-- If you just want try out APITable\[^info], using our hosted version at [apitable.com\](https://apitable.com). -->If you just want to try out APITable[^info], click here for [⚡️Gitpod Online Demo](https://gitpod.io/#https://github.com/apitable/apitable).
+> Porozmawiaj z nami na [Discordzie](https://discord.gg/TwNb9nfdBU); śledź naszego [Twittera](https://twitter.com/apitable_com).<!-- If you just want try out APITable\[^info], using our hosted version at [apitable.com\](https://apitable.com). -->Jeśli chcesz wypróbować APITable[^info], kliknij tutaj, aby uruchomić [⚡Gitpod Online Demo](https://gitpod.io/#https://github.com/apitable/apitable).
 
-If you want to install APITable in your local or cloud computing environment, see [💾 Installation](#installation)
+Jeśli chcesz zainstalować APITable w środowisku lokalnym lub w chmurze, to sprawdź: [💾 Instalacja](#installation)
 
-If you want to set up your local development environment, read our [🧑‍💻 Developer Guide](./docs/contribute/developer-guide.md)
+Jeśli chcesz skonfigurować lokalne środowisko programistyczne, przeczytaj nasz [🧑‍💻 Poradnik Developera](./docs/contribute/developer-guide.md)
 
 ## 🔥Funkcjonalności
 
@@ -123,10 +123,10 @@ If you want to set up your local development environment, read our [🧑‍💻 
 
  <tr>
     <th>
-      <a href="#">Powerful Rows/Columns Permissions</a>
+      <a href="#">Szczegółowa kontrola uprawnień na poziomie wiersza/kolumny</a>
     </th>
     <th>
-      <a href="#">Embed</a>
+      <a href="#">Treść gotowa do osadzenia</a>
     </th>
   </tr>
 
@@ -145,9 +145,9 @@ If you want to set up your local development environment, read our [🧑‍💻 
 
 </table>
 
-APITable provides a range of amazing features, from the personal to the enterprise.
+APITable zapewnia szereg unikatowych funkcjonalności przydatnych do użytkowników prywatnych oraz instytucji.
 
-- Advanced technology stack and open-source
+- Zaawansowane technologie i otwartoźródłowy kod
   - `Realtime collaboration` allows multiple users to edit together in real time, or simultaneously with the `Operational Transformation (OT)` Algorithm.
   - Extremely smooth, user-friendly, super-fast database-spreadsheet interface in `<canvas> Rendering Engine`.
   - Database native architecture: Changeset / Operation / Action / Snapshot and so on.
