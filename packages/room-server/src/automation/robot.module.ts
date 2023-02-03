@@ -44,6 +44,8 @@ import { RecordCreatedListener } from './events/listeners/record.created.listene
 import { RecordUpdatedListener } from './events/listeners/record.updated.listener';
 import { RobotServiceService } from './services/robot.service.service';
 import { NodeModule } from 'node/node.module';
+import { RobotActionService } from './services/robot.action.service';
+import { RobotRobotService } from './services/robot.robot.service';
 
 @Module({
   imports: [
@@ -80,6 +82,8 @@ import { NodeModule } from 'node/node.module';
     TriggerEventHelper,
     RecordCreatedListener,
     RecordUpdatedListener,
+    RobotActionService,
+    RobotRobotService,
   ],
   exports: [
     AutomationService,

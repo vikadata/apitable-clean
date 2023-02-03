@@ -21,8 +21,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AutomationRobotRepository } from './automation.robot.repository';
 import { AutomationRobotEntity } from '../entities/automation.robot.entity';
 import { DeepPartial } from 'typeorm';
-import { ConfigModule } from '@nestjs/config';
-import { DatabaseConfigService } from 'shared/services/config/database.config.service';
+// import { ConfigModule } from '@nestjs/config';
+// import { DatabaseConfigService } from 'shared/services/config/database.config.service';
 
 describe('AutomationRobotRepository', () => {
   let automationRobotRepository: AutomationRobotRepository;
@@ -32,31 +32,44 @@ describe('AutomationRobotRepository', () => {
   const theUserId = 'theUserId';
   let module: TestingModule;
   let entity: AutomationRobotEntity;
+  let addRobot: Function;
 
   beforeAll(async () => {
     module = await Test.createTestingModule({
       imports: [
-        ConfigModule.forRoot({ isGlobal: true }),
-        TypeOrmModule.forRootAsync({
-          useClass: DatabaseConfigService,
-        }),
+        TypeOrmModule.forRoot(
+          {
+            type: "mysql",
+            host: 'localhost',
+            port: 3306,
+            username: 'root',
+            password: 'vikadata@com',
+            database:  'vikadata',
+            entityPrefix: 'vika_',
+            autoLoadEntities: true,
+            keepConnectionAlive: true,
+          }
+        ),
         TypeOrmModule.forFeature([AutomationRobotRepository]),
       ],
       providers: [AutomationRobotRepository],
     }).compile();
 
     automationRobotRepository = module.get<AutomationRobotRepository>(AutomationRobotRepository);
-    const robot: DeepPartial<AutomationRobotEntity> = {
-      resourceId: theRobotResourceId,
-      robotId: theRobotId,
-      name: 'robot',
-      description: 'the test robot',
-      isActive: true,
-      createdBy: theUserId,
-      updatedBy: theUserId,
-    };
-    const record = automationRobotRepository.create(robot);
-    entity = await automationRobotRepository.save(record);
+    addRobot = async (robotId: string): Promise<AutomationRobotEntity> => {
+      const robot: DeepPartial<AutomationRobotEntity> = {
+        resourceId: theRobotResourceId,
+        robotId,
+        name: 'robot',
+        description: 'the test robot',
+        isActive: true,
+        createdBy: theUserId,
+        updatedBy: theUserId,
+      };
+      const record = automationRobotRepository.create(robot);
+      return await automationRobotRepository.save(record);
+    }
+    entity = await addRobot(theRobotId);
     expect(entity).toBeDefined();
   });
 
@@ -78,9 +91,34 @@ describe('AutomationRobotRepository', () => {
   });
 
   it('given one active robot entity when get robot id by resource id', async () => {
-    const robotIds = await automationRobotRepository.getRobotIdByResourceId(theRobotResourceId);
+    const robotIds = await automationRobotRepository.selectRobotIdByResourceId(theRobotResourceId);
     expect(robotIds).toBeDefined();
     expect(robotIds.length).toEqual(1);
     expect(robotIds[0]!.robotId).toEqual(theRobotId);
   });
+
+  it('should be get the resource\'s robotIds info', async() => {
+    const robots = {};
+    for (let i = 0; i < 3; i++) {
+      const robot = await addRobot(`test-${i}`);
+      robots[robot.robotId] = robot;
+    }
+    const wrappedRobotIds = await automationRobotRepository.selectRobotIdsByResourceId(theRobotResourceId);
+    expect(wrappedRobotIds).toBeDefined();
+    expect(wrappedRobotIds.length).toEqual(4);
+    const robotIds = wrappedRobotIds.map(wrappedRobotId => wrappedRobotId.robotId);
+    for (let i = 0; i < 4; i++) {
+      if (robotIds[i] === theRobotId) continue;
+      expect(robots[robotIds[i]!]).toBeDefined();
+      await automationRobotRepository.delete(robots[robotIds[i]!].id);
+    }
+  })
+
+  it('should be get robots by robot ids', async() => {
+    const testRobot = await addRobot('test');
+    const robot = await automationRobotRepository.selectRobotBaseInfoDtoByRobotIds([theRobotId, testRobot.robotId]);
+    expect(robot).toBeDefined();
+    expect(robot.length).toEqual(2);
+    await automationRobotRepository.delete(testRobot.id);
+  })
 });
