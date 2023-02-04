@@ -21,8 +21,8 @@ import { AutomationTriggerTypeRepository } from '../repositories/automation.trig
 import { AutomationTriggerRepository } from '../repositories/automation.trigger.repository';
 import { AutomationServiceRepository } from '../repositories/automation.service.repository';
 import { AutomationRobotRepository } from '../repositories/automation.robot.repository';
-import { ResourceRobotTriggerDto } from '../dtos/resource.robot.trigger.dto';
 import { IResourceTriggerGroupVo } from '../vos/resource.trigger.group.vo';
+import { ResourceRobotTriggerDto } from '../dtos/trigger.dto';
 
 @Injectable()
 export class RobotTriggerService {
