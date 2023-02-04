@@ -21,8 +21,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AutomationRobotRepository } from './automation.robot.repository';
 import { AutomationRobotEntity } from '../entities/automation.robot.entity';
 import { DeepPartial } from 'typeorm';
-// import { ConfigModule } from '@nestjs/config';
-// import { DatabaseConfigService } from 'shared/services/config/database.config.service';
+import { ConfigModule } from '@nestjs/config';
+import { DatabaseConfigService } from 'shared/services/config/database.config.service';
 
 describe('AutomationRobotRepository', () => {
   let automationRobotRepository: AutomationRobotRepository;
@@ -37,19 +37,10 @@ describe('AutomationRobotRepository', () => {
   beforeAll(async () => {
     module = await Test.createTestingModule({
       imports: [
-        TypeOrmModule.forRoot(
-          {
-            type: "mysql",
-            host: 'localhost',
-            port: 3306,
-            username: 'root',
-            password: 'vikadata@com',
-            database:  'vikadata',
-            entityPrefix: 'vika_',
-            autoLoadEntities: true,
-            keepConnectionAlive: true,
-          }
-        ),
+        ConfigModule.forRoot({ isGlobal: true }),
+        TypeOrmModule.forRootAsync({
+          useClass: DatabaseConfigService,
+        }),
         TypeOrmModule.forFeature([AutomationRobotRepository]),
       ],
       providers: [AutomationRobotRepository],
