@@ -165,7 +165,7 @@ APITable zapewnia szereg unikatowych funkcjonalności przydatnych do użytkownik
 - Batteries included
   - Built-in 10+ official templates.
   - Robot Automation and customization available.
-  - BI dashboard
+  - Panel Business Intelligence
   - One-click auto-generated form
   - Shareable and embeddable page.
   - Multi-language support.
@@ -185,7 +185,7 @@ APITable zapewnia szereg unikatowych funkcjonalności przydatnych do użytkownik
 - Enterprise features:
   - SAML
   - Single-Sign-On (SSO)
-  - Audit
+  - Audyt
   - Database Auto Backup
   - Eksporter danych
   - Znak wodny
