@@ -29,7 +29,7 @@ describe('DatasheetRepositoryTest', () => {
   let repository: DatasheetRepository;
   let entity: DatasheetEntity;
 
-  beforeAll(async () => {
+  beforeAll(async() => {
     module = await Test.createTestingModule({
       imports: [
         ConfigModule.forRoot({ isGlobal: true }),
@@ -43,24 +43,24 @@ describe('DatasheetRepositoryTest', () => {
     repository = module.get<DatasheetRepository>(DatasheetRepository);
   });
 
-  beforeEach(async () => {
+  beforeEach(async() => {
     const datasheet: DeepPartial<DatasheetEntity> = {
       dstId: 'datasheetId',
       revision: 1,
     };
     const record = repository.create(datasheet);
     entity = await repository.save(record);
-  })
+  });
 
-  afterEach(async () => {
+  afterEach(async() => {
     await repository.delete(entity.id);
     await repository.manager.connection.close();
-  })
+  });
 
-  it('should get revisions by datasheet ids', async () => {
+  it('should get revisions by datasheet ids', async() => {
     const revisions = await repository.selectRevisionByDstIds([entity.dstId!]);
     expect(revisions.length).toEqual(1);
     expect(revisions[0]?.resourceId).toEqual(entity.dstId);
     expect(revisions[0]?.revision).toEqual('1');
-  })
-})
+  });
+});
