@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { Field, FieldType, IMeta, IRecord, IRecordMap, IReduxState } from '@apitable/core';
+import { Field, FieldType, ILinkIds, IMeta, IRecord, IRecordMap, IReduxState } from '@apitable/core';
 import { Injectable } from '@nestjs/common';
 import { RecordCommentService } from './record.comment.service';
 import { get, isEmpty, keyBy, orderBy } from 'lodash';
@@ -29,7 +29,7 @@ import { RecordHistoryDto } from '../dtos/record.history.dto';
 import { UnitBaseInfoDto } from '../../../unit/dtos/unit.base.info.dto';
 import { DatasheetRecordEntity } from '../entities/datasheet.record.entity';
 import { RecordMap } from '../../interfaces';
-import { DatasheetRecordRepository } from '../../datasheet/repositories/datasheet.record.repository';
+import { DatasheetRecordRepository } from '../repositories/datasheet.record.repository';
 import { RecordHistoryQueryRo } from '../ros/record.history.query.ro';
 import { DatasheetChangesetService } from './datasheet.changeset.service';
 
@@ -332,12 +332,9 @@ export class DatasheetRecordService {
     return [];
   }
 
-  async getLinkRecordIdsByRecordIdAndFieldId(dstId: string, recordId: string, fieldId: string) {
+  public async getLinkRecordIdsByRecordIdAndFieldId(dstId: string, recordId: string, fieldId: string): Promise<ILinkIds>{
     const raw = await this.recordRepo.selectLinkRecordIdsByRecordIdAndFieldId(dstId, recordId, fieldId);
-    if (raw) {
-      return raw[0]?.linkRecordIds;
-    }
-    return [];
+    return raw ? raw as ILinkIds : [];
   }
 
   public getRecordTitle(record: IRecord, datasheetMeta: IMeta, store: Store<IReduxState>) {

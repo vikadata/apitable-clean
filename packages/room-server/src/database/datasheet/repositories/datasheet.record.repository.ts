@@ -16,6 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+import { ICellValue } from '@apitable/core';
 import { EntityRepository, In, Repository } from 'typeorm';
 import { DatasheetRecordEntity } from '../entities/datasheet.record.entity';
 
@@ -53,16 +54,26 @@ export class DatasheetRecordRepository extends Repository<DatasheetRecordEntity>
       .getRawOne<{ revisionHistory: string }>();
   }
 
-  selectLinkRecordIdsByRecordIdAndFieldId(dstId: string, recordId: string, fieldId: string) {
-    const path = `$.${fieldId}`;
-    // todo(itou): replace dynamic sql
-    return this.query(
-      `
-       SELECT vdr.data->?  as linkRecordIds
-       FROM ${this.manager.connection.options.entityPrefix}datasheet_record vdr
-       WHERE vdr.dst_id = ? AND vdr.record_id = ? AND vdr.is_deleted = 0 limit 1
-      `,
-      [path, dstId, recordId],
-    );
+  /**
+   * Notice: the function aim to find magic link type field's value.
+   *
+   * If the field is not link type, it should not call this function to get cell value.
+   *
+   * @param dstId     the selected datasheet
+   * @param recordId  the selected record
+   * @param fieldId   the selected field
+   */
+  public async selectLinkRecordIdsByRecordIdAndFieldId(dstId: string, recordId: string, fieldId: string): Promise<ICellValue | undefined> {
+    const record = await this.findOne({
+      select: ['data'],
+      where: {
+        dstId,
+        recordId,
+        isDeleted: false,
+      }
+    });
+    // the record's filed value map
+    const data = record?.data;
+    return data ? data![fieldId]: null;
   }
 }
