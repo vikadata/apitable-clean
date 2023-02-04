@@ -32,7 +32,7 @@ describe('AutomationTriggerRepository', () => {
   const theRobotId = 'theRobotId';
   let entity: AutomationTriggerEntity;
 
-  beforeAll(async () => {
+  beforeAll(async() => {
     module = await Test.createTestingModule({
       imports: [
         ConfigModule.forRoot({ isGlobal: true }),
@@ -59,19 +59,19 @@ describe('AutomationTriggerRepository', () => {
     entity = await repository.save(record);
   });
 
-  afterAll(async () => {
+  afterAll(async() => {
     await repository.manager.connection.close();
   });
 
   afterEach(async() => {
     await repository.delete(entity.id);
-  })
+  });
 
   it('should be defined', () => {
     expect(repository).toBeDefined();
   });
 
-  it('given a trigger entity when get trigger by the robot id and the trigger type id', async () => {
+  it('given a trigger entity when get trigger by the robot id and the trigger type id', async() => {
     const resourceRobotTriggerDtos = await repository.getTriggerByRobotIdAndTriggerTypeId(theRobotId, theTriggerTypeId);
     expect(resourceRobotTriggerDtos).toBeDefined();
     expect(resourceRobotTriggerDtos.length).toEqual(1);
@@ -87,7 +87,7 @@ describe('AutomationTriggerRepository', () => {
     expect(robotTriggerBaseInfoDtos[0]!.robotId).toEqual(theRobotId);
   });
 
-  it('should get trigger info by robot id', async () => {
+  it('should get trigger info by robot id', async() => {
     const triggerInfo = await repository.selectTriggerInfoByRobotId(theRobotId);
     expect(triggerInfo).toBeDefined();
     expect(triggerInfo!.triggerId).toEqual(theTriggerId);
@@ -95,7 +95,7 @@ describe('AutomationTriggerRepository', () => {
     expect(triggerInfo!.input).toEqual({});
   });
 
-  it('should get undefined if robot not config the trigger', async () => {
+  it('should get undefined if robot not config the trigger', async() => {
     await repository.delete(entity.id);
     const triggerInfo = await repository.selectTriggerInfoByRobotId(theRobotId);
     expect(triggerInfo).toEqual(undefined);

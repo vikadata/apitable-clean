@@ -32,7 +32,7 @@ describe('AutomationServiceRepository', () => {
   const theBaseUrl = 'baseUrl';
   let entity: AutomationServiceEntity;
 
-  beforeAll(async () => {
+  beforeAll(async() => {
     module = await Test.createTestingModule({
       imports: [
         ConfigModule.forRoot({ isGlobal: true }),
@@ -47,7 +47,7 @@ describe('AutomationServiceRepository', () => {
     repository = module.get<AutomationServiceRepository>(AutomationServiceRepository);
   });
 
-  beforeEach(async () => {
+  beforeEach(async() => {
     const service: DeepPartial<AutomationServiceEntity> = {
       serviceId: theServiceId,
       slug: OFFICIAL_SERVICE_SLUG,
@@ -57,29 +57,29 @@ describe('AutomationServiceRepository', () => {
     entity = await repository.save(record);
   });
 
-  afterAll(async () => {
+  afterAll(async() => {
     await repository.manager.connection.close();
   });
 
   afterEach(async() => {
     await repository.delete(entity.id);
-  })
+  });
 
   it('should be defined', () => {
     expect(repository).toBeDefined();
   });
 
-  it("given one official service entity when judge whether the service id is the official service's id", async () => {
+  it("given one official service entity when judge whether the service id is the official service's id", async() => {
     const number = await repository.countOfficialServiceByServiceId(entity.serviceId);
     expect(number).toEqual(1);
   });
 
-  it('given one official service entity when judge whether the service with the special service id and service slug exist', async () => {
+  it('given one official service entity when judge whether the service with the special service id and service slug exist', async() => {
     const number = await repository.countServiceByServiceIdAndSlug(entity.serviceId, OFFICIAL_SERVICE_SLUG);
     expect(number).toEqual(1);
   });
 
-  it('should be get services\' baseUrls', async () => {
+  it('should be get services\' baseUrls', async() => {
     const baseUrls = await repository.selectBaseUrlsByServiceIds([theServiceId]);
     expect(baseUrls).toBeDefined();
     expect(baseUrls.length).toEqual(1);

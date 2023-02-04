@@ -29,7 +29,7 @@ describe('RobotActionTypeServiceTest', () => {
   let automationServiceRepository: AutomationServiceRepository;
   let service: RobotActionTypeService;
 
-  beforeAll(async () => {
+  beforeAll(async() => {
     module = await Test.createTestingModule({
       providers: [AutomationActionTypeRepository, AutomationServiceRepository, RobotActionTypeService],
     }).compile();
@@ -48,7 +48,7 @@ describe('RobotActionTypeServiceTest', () => {
     expect(service).toBeDefined();
   });
 
-  it('get action type should be return webhook', async () => {
+  it('get action type should be return webhook', async() => {
     jest.spyOn(automationActionTypeRepository, 'findOneOrFail').mockResolvedValue({
       id: 'id',
       serviceId: 'serviceId',
