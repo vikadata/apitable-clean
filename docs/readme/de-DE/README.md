@@ -253,15 +253,24 @@ Wenn Sie Ihre lokale Entwicklungsumgebung einrichten möchten, lesen Sie unseren
 
 Herzlich willkommen und vielen Dank für Ihr Interesse an APITable!
 
-Es gibt viele Möglichkeiten, einen Beitrag zu leisten, abgesehen vom Schreiben von Code.
+In addition to writing code, there are many ways for you to contribue.
+
+You can contribute as following:
+- Join and modify translations in our [Crowdin Translation Project](https://crowdin.com/project/apitablecode/invite?h=f48bc26f9eb188dcd92d5eb4a66f2c1f1555185)
+- Create [Issues](https://github.com/apitable/apitable/issues/new/choose)
+- Follow our [Twitter](https://twitter.com/apitable_com)
+- Create [Documentation](./docs)
+- [Contributing Code](./docs/contribute/developer-guide.md)
+
 
 You can read this repository’s [Contributing Guidelines](./CONTRIBUTING.md) to learn how to contribute.
 
 Hier ist eine kurze Anleitung, die Ihnen hilft, zu APITable beizutragen.
 
+
 ### Entwicklungsumgebung
 
-Erfahren Sie, wie Sie Ihre lokale Umgebung einrichten, in unserem [Entwicklerhandbuch](./docs/contribute/developer-guide.md).
+Learn how to set up your local environment, go to our [Developer Guide](./docs/contribute/developer-guide.md).
 
 ### Git Workflow einfach
 
@@ -302,6 +311,7 @@ APITable use these common convention:
 - Embbedbare Dokumentations-Komponenten von Drittanbietern
 - SQL-ähnliche Domain-spezifische Sprachen
 - Als IdP
+- Advanced automation robot
 - Web 3 Funktionen
 - ...
 
@@ -312,6 +322,7 @@ APITable use these common convention:
 - Einmal-Sign-An
 - Audit
 - Datenbanksicherung
+- Integrate with ChatGPT, Zapier, Slack, Google Workspace……
 - Wasserzeichen
 
 Für weitere Informationen kontaktieren Sie uns bitte unter <support@apitable.com>.
