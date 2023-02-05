@@ -64,7 +64,7 @@
 
 > APITable 目前是 `正在進行中的工作`。
 > 
-> We will publish the first release in late February 2023.
+> 我們將會在二月尾發佈首個版本。
 > 
 > 加入 [Discord](https://discord.gg/TwNb9nfdBU) 或 [Twitter](https://twitter.com/apitable_com) 保持聯繫。<!-- If you just want try out APITable\[^info], using our hosted version at [apitable.com\](https://apitable.com). -->如果您只是想嘗試APITable[^info], 點擊這裡 [⚡️Gitpod 在線 Demo](https://gitpod.io/#https://github.com/apitable/apitable).
 
@@ -81,7 +81,7 @@
       <a href="#">實時協同</a>
     </th>
     <th>
-      <a href="#">Automatic Form</a>
+      <a href="#">自動表格生成</a>
     </th>
 
   </tr>
@@ -126,7 +126,7 @@
       <a href="#">強大的行/列權限</a>
     </th>
     <th>
-      <a href="#">Embed</a>
+      <a href="#">嵌入</a>
     </th>
   </tr>
 
@@ -147,7 +147,7 @@
 
 APITable 提供了一系列令人驚奇的功能，從個人到企業。
 
-- Advanced technology stack and open-source
+- 先進技術與開源
   - `實時合作` 允許多個用戶實時或與 `操作轉換(OT)` 算法同時進行編輯。
   - 在 `中極其順暢、方便用戶、超快的數據庫電子表格接口<canvas> 渲染引擎`
   - Database native architecture: Changeset / Operation / Action / Snapshot and so on.
