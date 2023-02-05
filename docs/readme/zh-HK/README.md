@@ -253,15 +253,24 @@ curl https://apitable.github.io/install.sh | bash
 
 歡迎並感謝您有興趣為APITable作出貢獻！
 
-除了編寫代碼，您還有許多方法可以做出貢獻。
+In addition to writing code, there are many ways for you to contribue.
+
+You can contribute as following:
+- Join and modify translations in our [Crowdin Translation Project](https://crowdin.com/project/apitablecode/invite?h=f48bc26f9eb188dcd92d5eb4a66f2c1f1555185)
+- Create [Issues](https://github.com/apitable/apitable/issues/new/choose)
+- Follow our [Twitter](https://twitter.com/apitable_com)
+- Create [Documentation](./docs)
+- [Contributing Code](./docs/contribute/developer-guide.md)
+
 
 你可以閱讀這個倉庫的 [貢獻指南](./CONTRIBUTING.md) 來學習如何貢獻.
 
 這是一個快速指南來幫助您為API做出貢獻。
 
+
 ### 發展環境
 
-在我們的 [開發者指南](./docs/contribute/developer-guide.md) 中學習如何設置您的本地環境。
+Learn how to set up your local environment, go to our [Developer Guide](./docs/contribute/developer-guide.md).
 
 ### Git 工作流基礎
 
@@ -302,6 +311,7 @@ APITable use these common conventions:
 - 可嵌入第三方文件部分
 - SQL類域特定語言
 - IdP
+- Advanced automation robot
 - Web 3 功能
 - ...
 
@@ -312,6 +322,7 @@ APITable use these common conventions:
 - Single-Sign-On
 - 審計
 - 數據庫備份
+- Integrate with ChatGPT, Zapier, Slack, Google Workspace……
 - 水標
 
 欲瞭解更多信息，請通過 <support@apitable.com> 聯繫我們。
