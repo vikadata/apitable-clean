@@ -253,15 +253,24 @@ APITable يوفر مجموعة من الميزات المذهلة، من الش�
 
 مرحبا، وشكرا لاهتمامك بالمساهمة في APITable!
 
-هناك العديد من الطرق التي يمكن أن تساهم بها، بما يتجاوز كتابة الكود.
+In addition to writing code, there are many ways for you to contribue.
+
+You can contribute as following:
+- Join and modify translations in our [Crowdin Translation Project](https://crowdin.com/project/apitablecode/invite?h=f48bc26f9eb188dcd92d5eb4a66f2c1f1555185)
+- Create [Issues](https://github.com/apitable/apitable/issues/new/choose)
+- Follow our [Twitter](https://twitter.com/apitable_com)
+- Create [Documentation](./docs)
+- [Contributing Code](./docs/contribute/developer-guide.md)
+
 
 يمكنك قراءة هذا المستودع [إرشادات المساهمة](./CONTRIBUTING.md) لتعلم كيفية المساهمة.
 
 إليك دليل سريع لمساعدتك في المساهمة في APITable
 
+
 ### البيئة الإنمائية
 
-تعلم كيفية إعداد بيئتك المحلية، في [دليل المطور](./docs/contribute/developer-guide.md) لدينا.
+Learn how to set up your local environment, go to our [Developer Guide](./docs/contribute/developer-guide.md).
 
 ### سير عمل Git الأساسي
 
@@ -302,6 +311,7 @@ APITable يوفر مجموعة من الميزات المذهلة، من الش�
 - مكونات توثيق الطرف الثالث القابلة للنسر
 - لغات شبيهة بنطاق محدد
 - كهوية شخصية
+- Advanced automation robot
 - ميزات ويب 3
 - ...
 
@@ -312,6 +322,7 @@ APITable يوفر مجموعة من الميزات المذهلة، من الش�
 - تسجيل دخول أحادي
 - مراجعة
 - النسخ الاحتياطي لقاعدة البيانات
+- Integrate with ChatGPT, Zapier, Slack, Google Workspace……
 - العلامة المائية
 
 لمزيد من المعلومات، يرجى الاتصال بنا على <support@apitable.com>.
