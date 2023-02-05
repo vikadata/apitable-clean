@@ -253,15 +253,24 @@ curl https://apitable.github.io/install.sh | bash
 
 欢迎并感谢您有兴趣为 APITable 作出贡献！
 
-除了编写代码，您还有许多方法可以做出贡献。
+In addition to writing code, there are many ways for you to contribue.
+
+You can contribute as following:
+- Join and modify translations in our [Crowdin Translation Project](https://crowdin.com/project/apitablecode/invite?h=f48bc26f9eb188dcd92d5eb4a66f2c1f1555185)
+- Create [Issues](https://github.com/apitable/apitable/issues/new/choose)
+- Follow our [Twitter](https://twitter.com/apitable_com)
+- Create [Documentation](./docs)
+- [Contributing Code](./docs/contribute/developer-guide.md)
+
 
 你可以阅读这个仓库的 [贡献指南](./CONTRIBUTING.md) 来学习如何贡献.
 
 这是一个帮助您为 APITable 作出贡献的快速指南。
 
+
 ### 开发环境
 
-在我们的 [开发者指南](./docs/contribute/developer-guide.md) 中学习如何设置您的本地开发环境。
+Learn how to set up your local environment, go to our [Developer Guide](./docs/contribute/developer-guide.md).
 
 ### Git 工作流基础
 
@@ -302,6 +311,7 @@ APITable 可适用这些通用的约定：
 - 可嵌入的第三方文档组件
 - SQL类域特定语言
 - 作为一个 IdP
+- Advanced automation robot
 - Web 3 功能
 - ...
 
@@ -312,6 +322,7 @@ APITable 可适用这些通用的约定：
 - 单点登录
 - 审计
 - 数据库备份
+- Integrate with ChatGPT, Zapier, Slack, Google Workspace……
 - 水印
 
 欲了解更多信息，请通过 <support@apitable.com> 联系我们。
