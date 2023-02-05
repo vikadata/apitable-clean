@@ -253,15 +253,24 @@ curl https://apitable.github.io/install.sh | bash
 
 APITableに貢献していただき、ありがとうございます！
 
-コードを書く以外にも、貢献できる方法はたくさんあります。
+In addition to writing code, there are many ways for you to contribue.
+
+You can contribute as following:
+- Join and modify translations in our [Crowdin Translation Project](https://crowdin.com/project/apitablecode/invite?h=f48bc26f9eb188dcd92d5eb4a66f2c1f1555185)
+- Create [Issues](https://github.com/apitable/apitable/issues/new/choose)
+- Follow our [Twitter](https://twitter.com/apitable_com)
+- Create [Documentation](./docs)
+- [Contributing Code](./docs/contribute/developer-guide.md)
+
 
 このリポジトリの [コントリビューションガイドライン](./CONTRIBUTING.md) を読んで、コントリビューションの方法を学ぶことができます。
 
 APITableに貢献するためのクイックガイドはこちらです。
 
+
 ### 開発環境
 
-ローカル環境の設定方法については、 [開発者ガイド](./docs/contribute/developer-guide.md) をご覧ください。
+Learn how to set up your local environment, go to our [Developer Guide](./docs/contribute/developer-guide.md).
 
 ### Git ワークフロー 基本
 
@@ -302,6 +311,7 @@ APITableに貢献するためのクイックガイドはこちらです。
 - 埋め込み可能なサードパーティ製ドキュメントコンポーネント
 - SQLのようなドメイン固有の言語
 - IdPとして
+- Advanced automation robot
 - Web 3の機能
 - ...
 
@@ -312,6 +322,7 @@ APITableに貢献するためのクイックガイドはこちらです。
 - シングルサインオン
 - Audit
 - データベースバックアップ
+- Integrate with ChatGPT, Zapier, Slack, Google Workspace……
 - ウォーターマーク
 
 詳細については、 <support@apitable.com> までご連絡ください。
