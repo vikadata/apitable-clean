@@ -253,15 +253,24 @@ Si vous voulez configurer votre environnement de développement local, lisez not
 
 Bienvenue, et merci de votre intérêt à contribuer à APITable!
 
-Il y a de nombreuses façons de contribuer, au-delà de l'écriture de code.
+In addition to writing code, there are many ways for you to contribue.
+
+You can contribute as following:
+- Join and modify translations in our [Crowdin Translation Project](https://crowdin.com/project/apitablecode/invite?h=f48bc26f9eb188dcd92d5eb4a66f2c1f1555185)
+- Create [Issues](https://github.com/apitable/apitable/issues/new/choose)
+- Follow our [Twitter](https://twitter.com/apitable_com)
+- Create [Documentation](./docs)
+- [Contributing Code](./docs/contribute/developer-guide.md)
+
 
 Vous pouvez lire les [directives de contribution de ce dépôt](./CONTRIBUTING.md) pour apprendre comment contribuer.
 
 Voici un guide rapide pour vous aider à contribuer à APITable.
 
+
 ### Environnement de développement
 
-Apprenez comment configurer votre environnement local, dans notre [Guide de Développement](./docs/contribute/developer-guide.md).
+Learn how to set up your local environment, go to our [Developer Guide](./docs/contribute/developer-guide.md).
 
 ### Git workflow basique
 
@@ -302,6 +311,7 @@ Utilisez ces conventions communes APITables :
 - Composants de documentation de tiers incorporables
 - Langues spécifiques au domaine de type SQL
 - En tant qu'IdP
+- Advanced automation robot
 - Fonctionnalités Web 3
 - ...
 
@@ -312,6 +322,7 @@ Utilisez ces conventions communes APITables :
 - Authentification unique
 - Audit
 - Sauvegarde de la base de données
+- Integrate with ChatGPT, Zapier, Slack, Google Workspace……
 - Filigrane
 
 Pour plus d'informations, veuillez nous contacter à <support@apitable.com>.
